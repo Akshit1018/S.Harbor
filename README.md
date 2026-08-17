@@ -1,37 +1,44 @@
-# S.Harbor
+# Harbor — Open Source YouTube Subscriptions Inbox (No Home Feed)
 
-**Simple name:** Harbor
+**Harbor** is an open-source **YouTube client without the home feed**. You only see channels you subscribe to — inbox, later, library, live, Shorts — so the algorithm does not pick the next hour.
 
-YouTube subscriptions inbox, no home feed.
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 
-This is a Grok App Builder project. The sandbox npm name was `app-builder-workspace`. On GitHub it is **S.Harbor** (private).
+## Features
 
-## Run on this Mac
+- Subscriptions-only inbox
+- Later queue with time buckets
+- Channel pages, live, Shorts, library
+- OPML import / export
+- Pull-to-refresh, iOS-style chrome
 
-Need **Node.js 22** and **npm**. Postgres is not required (uses PGLite in the browser/process).
+> Uses public YouTube page metadata. Respect YouTube terms. Bring your own keys if you add the Data API.
+
+## Who it is for
+
+- People who want **YouTube without recommended**
+- Parents / focus setups
+- Developers building a **feed reader for video**
+
+## Quick start
 
 ```bash
-cd "/Users/akshitpareta/Documents/S-projects/S.Harbor"
+git clone https://github.com/Akshit1018/S.Harbor.git
+cd S.Harbor
 npm install
-npm run dev
-```
-
-Open http://127.0.0.1:8080
-
-To skip Grok login in local preview:
-
-```bash
 VITE_AUTH_ENABLED=false npm run dev
 ```
 
-Optional AI (only if this app calls Grok): set `XAI_API_KEY`.
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
-## Scripts
+## Tech stack
 
-- `npm run dev` — Vite on port 8080
-- `npm run build` — production build + DB migrate (skipped without DATABASE_URL)
-- `npm run typecheck`
+React 19 · TanStack Start · Vite · Tailwind · Zustand
 
-## Notes
+## License
 
-Do not commit `.env`, `node_modules`, or `.grok/`.
+[MIT](LICENSE)
+
+## Keywords
+
+YouTube without recommended, subscriptions inbox, YouTube RSS client, focus YouTube app, OPML video reader, open source YouTube frontend
